@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsiv.css" />
+    <link
+      rel="stylesheet"
+      href="link: https://www.fontspace.com/lms-pokemon-master-font-f7701"
+    />
+    <title>Pokedex</title>
+    <script src="script.js"></script>
+    <script src="templates.js"></script>
+  </head>
+  <body onload="getPokemons()">
+    <div onclick="topFunction()" class="overlay d-none" id="myBtn">
+      <img src="img/arrow.png" alt="" />
+    </div>
+    <div class="overview d-none" id="overviewId"></div>
+    <header>
+      <h1 class="pokedex">Welcome, Poké'dex GNS</h1>
+
+      <input
+        class="inp"
+        type="text"
+        placeholder="Search.."
+        name=""
+        id="search"
+        onkeyup="loading(), checkInput()"
+      />
+    </header>
+
+    <div class="outputbox d-none" id="output"></div>
+    <div id="div"></div>
+    <div id="button" class="button-box">
+      <div id="button-loader-icon" class="lds-ring d-none">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <button id="loader" onclick="loadMorePokemon()">More Pokémon</button>
+    </div>
+    <footer></footer>
+  </body>
+</html>
