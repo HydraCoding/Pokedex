@@ -9,10 +9,10 @@ function searchPokemonsHTML() {
             <img src="img/pokeball.png" class="pokeball2" alt="" />
             <img src="img/pokeball.png" class="pokeball3" alt="" />
             <h2  class="pokemonName" id="search-name${searchJson["id"]}"></h2>
-            <div class="smal-info smal" id="search-smal-info${searchJson["id"]}"></div>
-            <div class="smal-info2 smal2" id="search-second-info${searchJson["id"]}"></div>
+            <div class="smal-info smal" id="smal-info${searchJson["id"]}"></div>
+            <div class="smal-info2 smal2" id="second-info${searchJson["id"]}"></div>
             <p class="hp hp2" id="search-hp${searchJson["id"]}"></p>
-            <p class="id" id="search-poke_id${searchJson["id"]}"></p>
+            <p class="id" id="poke_id${searchJson["id"]}"></p>
             <img  class="img" id="search-img${searchJson["id"]}" alt="" />
             </div>
             </div>`;
@@ -33,7 +33,8 @@ function overviewHTML(
 ) {
   return `
     <div class="close" onclick="closeOverview()">X</div>
-    <div class="detail">
+    
+    <div class="detail" id="overview_background">
       <div class="gifbox"><h3 class="overviewName" >${upperName}</h3><img class="overviewImg" id="gif"></div>
         <table>
           <tr class="table-title" >
@@ -72,7 +73,7 @@ function overviewHTML(
 function generateCardsHTML(currentPokemonId) {
   return `
       <div class="card-overlay" >
-        <div class="pokemon-card" onclick="overview(${currentPokemonId})" id="pokemon-card${currentPokemonId}">
+        <div class="pokemon-card" onclick="overview(${currentPokemon["id"]})" id="pokemon-card${currentPokemonId}">
           <div class="stripe"></div>
           <div class="stripe2"></div>
           <img src="img/pokeball.png" class="pokeball"/>

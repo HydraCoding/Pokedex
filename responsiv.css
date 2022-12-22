@@ -82,17 +82,36 @@
   inp {
     line-height: 15px;
   }
+  .close {
+    top: 1%;
+  }
 
-  .overview {
-    color: black;
-    font-size: 22px;
-    font-weight: 1000;
+  .detail {
+    height: 82%;
+    margin-block-start: 3%;
+  }
+  table {
+    height: 58vh;
+  }
+
+  th {
+    margin-inline-start: -144px;
+  }
+
+  .overviewName {
+    font-size: 2em;
+    text-align: center;
+    margin-top: -18%;
   }
 
   img.overviewImg {
-    width: 34%;
-    height: 75%;
-    object-fit: cover;
+    top: 23%;
+  }
+
+  .overview {
+    color: black;
+    font-size: 18px;
+    font-weight: 1000;
   }
 
   .pokemon-card {
