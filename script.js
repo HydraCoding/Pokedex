@@ -281,7 +281,7 @@ async function searchPokemons() {
   if (document.getElementById("search").value == "") {
     checkInput();
   } else {
-    document.getElementById("output").innerHTML = "";
+    /*document.getElementById("output").innerHTML = "";*/
     let searchList = [];
     wantedPokemon = document.getElementById("search").value;
     wantedPokemon.toLowerCase();
@@ -311,10 +311,11 @@ function searchLogic(wantedPokemon, searchList) {
       }
     }
   }
-  showSearchResult(searchList);
+  setTimeout(showSearchResult, 1430, searchList);
 }
 
 async function showSearchResult(searchList) {
+  removeRealod();
   for (let j = 0; j < searchList.length; j++) {
     let searchResult = searchList[j];
     searchRespons = await fetch(searchResult["url"]);
@@ -336,16 +337,16 @@ function checkInput() {
   let searchValue = document.getElementById("search").value;
   if (searchValue == "") {
     addRelaod();
-    setTimeout(closeSearch, 1500);
+    setTimeout(closeSearch, 100);
   }
 }
 
 function loading() {
+  setTimeout(searchPokemons, 200);
   document.getElementById("button").classList.add("d-none");
   document.getElementById("div").classList.add("d-none");
   document.getElementById("output").classList.remove("d-none");
   addRelaod();
-  setTimeout(searchPokemons, 1000);
 }
 
 function changeSearchClasses() {
@@ -362,6 +363,10 @@ function changeSearchClasses() {
 function addRelaod() {
   document.getElementById("output").innerHTML =
     '<div id="loading" class="lds-ripple"><div></div><div></div></div>';
+}
+
+function removeRealod() {
+  document.getElementById("output").innerHTML = "";
 }
 
 function closeSearch() {
