@@ -2,18 +2,18 @@ function searchPokemonsHTML() {
   return `
       
       <div class="card-overlay">
-      <div class="pokemon-card" onclick="overview(${searchJson["id"]})" id="search-pokemon-card${searchJson["id"]}">
+      <div class="pokemon-card" onclick="overview(${searchJson["id"]})" id="pokemon-card${searchJson["id"]}">
             <div class="stripe"></div>
             <div class="stripe2"></div>
             <img src="img/pokeball.png" class="pokeball" alt="" />
             <img src="img/pokeball.png" class="pokeball2" alt="" />
             <img src="img/pokeball.png" class="pokeball3" alt="" />
-            <h2  class="pokemonName" id="search-name${searchJson["id"]}"></h2>
+            <h2  class="pokemonName" id="name${searchJson["id"]}"></h2>
             <div class="smal-info smal" id="smal-info${searchJson["id"]}"></div>
             <div class="smal-info2 smal2" id="second-info${searchJson["id"]}"></div>
-            <p class="hp hp2" id="search-hp${searchJson["id"]}"></p>
+            <p class="hp hp2" id="hp${searchJson["id"]}"></p>
             <p class="id" id="poke_id${searchJson["id"]}"></p>
-            <img  class="img" id="search-img${searchJson["id"]}" alt="" />
+            <img  class="img" id="img${searchJson["id"]}" alt="" />
             </div>
             </div>`;
 }
